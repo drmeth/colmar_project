@@ -25,6 +25,8 @@ body {
 
 header {
     grid-area: header;
+    display: flex;
+    justify-content: space-between;
 }
 
 main {
@@ -57,4 +59,22 @@ footer {
 
 #thesis-exhibit {
     grid-area: thesis-exhibit;
+}
+
+/*header layout and content*/
+
+#heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav span {
+    margin: 0 16px;
 }
