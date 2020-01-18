@@ -12,3 +12,49 @@ body {
 html {
     font-size: 22px;
 }
+
+/*grid*/
+
+body {
+    display: grid;
+    grid: "header" 64px
+          "main" 1fr
+          "footer" 80px
+          / 100%;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid: "learn-something" 1fr
+          "keep-practising" 1fr
+          "start-learning" 1fr
+          "thesis-exhibit" 1fr
+          / 100%;
+    }
+
+footer {
+    grid-area: footer;
+}
+
+/*main-grid*/
+
+#learn-something {
+    grid-area: learn-something;
+}
+
+#keep-practising {
+    grid-area: keep-practising;
+}
+
+#start-learning {
+    grid-area: start-learning;
+}
+
+#thesis-exhibit {
+    grid-area: thesis-exhibit;
+}
