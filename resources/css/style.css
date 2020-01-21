@@ -11,6 +11,30 @@ body {
 
 html {
     font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    color: hsl(0, 0%, 22%);
+}
+
+/*personal design sheet styles*/
+
+h1 {
+    font-size: 1.45rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.75rem 0;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+p {
+    font-size: 0.818rem;
 }
 
 /*grid*/
@@ -32,8 +56,8 @@ header {
 main {
     grid-area: main;
     display: grid;
-    grid: "learn-something" 1fr
-          "keep-practising" 1fr
+    grid: "learn-something" 450px
+          "keep-practising" 650px
           "start-learning" 1fr
           "thesis-exhibit" 1fr
           / 100%;
@@ -47,10 +71,20 @@ footer {
 
 #learn-something {
     grid-area: learn-something;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: lightgray;
 }
 
 #keep-practising {
     grid-area: keep-practising;
+    display: grid;
+    grid: "left right" 1fr
+          "left right" 1fr
+          "left right" 1fr
+          / 1.6fr 1fr;
+    background-color: rgb(238, 234, 234);
 }
 
 #start-learning {
@@ -67,6 +101,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 1%;
+    font-weight: normal;
+}
+
+#heading img {
+    height: 45px;
+    width: auto;
 }
 
 header nav {
@@ -77,4 +118,129 @@ header nav {
 
 header nav span {
     margin: 0 16px;
+}
+
+#heading strong {
+    font-weight: normal;
+    color: grey;
+}
+
+/*learn-something section layout and content*/
+
+
+div.books-image {
+    width: 60%;
+    max-width: 700px;
+    height: 90%;
+    margin-left: 0.75rem;
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.learn-something-subsection {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.learn-something-subsection .start-here {
+    height: 38px;
+    width: 100%;
+    background-color: hsl(0, 0%, 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.learn-something-subsection p {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.learn-something-subsection span {
+    color: white;
+}
+
+/*keep-practising section layout and content*/
+
+
+/*left*/
+
+div.man-reading {
+    width: 90%;
+    max-width: 600px;
+    height: 55%;
+    background-image: url("../images/information-main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#left {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.left-paragraph {
+    width: 90%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.left-paragraph h2 {
+    margin: 0.5rem 0;
+}
+
+.left-text {
+    height: 85%;
+}
+
+.left-text #quote {
+    height: 80%;
+}
+
+.left-text #person {
+    font-size: 0.7rem;
+}
+
+/*right*/
+
+#right {
+    grid-area: right;
+    border-left: 2px solid rgb(201, 195, 195);
+    padding: 1rem 0 1rem 0.5rem;
+    display: grid;
+    grid: 1fr 1fr 1fr / 1fr;
+}
+
+div.small-container {
+    display: flex;
+    align-items: center;
+}
+
+section.info {
+    width: 65%;
+    padding-left: 0.5rem;
+}
+
+.small-container img {
+    width: 150px;
+    height: 150px;
+}
+
+.border {
+    border-bottom: 2px solid rgb(201, 195, 195);
+}
+
+#keep-practising a {
+    color: rgb(35, 119, 172);
 }
