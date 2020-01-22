@@ -23,7 +23,7 @@ h1 {
 
 h2 {
     font-size: 1.4rem;
-    font-weight: bold;
+    font-weight: 900;
     padding: 0.75rem 0;
 }
 
@@ -57,8 +57,8 @@ main {
     grid-area: main;
     display: grid;
     grid: "learn-something" 450px
-          "keep-practising" 650px
-          "start-learning" 1fr
+          "keep-practising" 680px
+          "start-learning"  740px
           "thesis-exhibit" 1fr
           / 100%;
     }
@@ -89,6 +89,11 @@ footer {
 
 #start-learning {
     grid-area: start-learning;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: lightgray;
 }
 
 #thesis-exhibit {
@@ -244,3 +249,108 @@ section.info {
 #keep-practising a {
     color: rgb(35, 119, 172);
 }
+
+/*start-learning section layout and content*/
+
+/*images*/
+
+#img1,
+#img2,
+#img3,
+#img4,
+#img5,
+#img6 {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#img1 {
+    background-image: url("../images/course-software.jpg");
+}
+
+#img2 {
+    background-image: url("../images/course-computer-art.jpg");
+}
+
+#img3 {
+    background-image: url("../images/course-design.jpg");
+}
+
+#img4 {
+    background-image: url("../images/course-data.jpg");
+}
+
+#img5 {
+    background-image: url("../images/course-business.jpg");
+}
+
+#img6 {
+    background-image: url("../images/course-marketing.jpg");
+}
+
+/*layout start-learning*/
+
+#start-learning h2 {
+    margin: 0.5rem 0 1rem 0;
+}
+
+#big-wrapper {
+    width: 85%;
+    height: 75%;
+    display: grid;
+    grid: "first second third" 1fr
+          "fourth fifth sixth" 1fr
+          / 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.w1 {
+    grid-area: first;
+}
+
+.w2 {
+    grid-area: second;
+}
+
+.w3 {
+    grid-area: third;
+}
+
+.w4 {
+    grid-area: fourth;
+}
+
+.w5 {
+    grid-area: fifth;
+}
+
+.w6 {
+    grid-area: sixth;
+}
+
+.wrapper {
+    display: grid;
+    min-height: 290px;
+    grid: "pic" 0.8fr
+          "course-content" 1fr
+          / 100%;
+    background-color: white;
+}
+
+div.pic {
+    grid-area: pic;
+}
+
+section.course-content {
+    grid-area: course-content;
+}
+
+.course-content p,
+.course-content h3 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*thesis exhibit section layout and content*/
+
