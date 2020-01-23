@@ -59,7 +59,7 @@ main {
     grid: "learn-something" 450px
           "keep-practising" 680px
           "start-learning"  740px
-          "thesis-exhibit" 1fr
+          "thesis-exhibit"  600px
           / 100%;
     }
 
@@ -98,6 +98,10 @@ footer {
 
 #thesis-exhibit {
     grid-area: thesis-exhibit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(238, 234, 234);
 }
 
 /*header layout and content*/
@@ -354,3 +358,63 @@ section.course-content {
 
 /*thesis exhibit section layout and content*/
 
+#thesis-exhibit h2 {
+    margin: 0.5rem 0 1rem;
+}
+
+.wrap-it {
+    display: grid;
+    height: 100%;
+    grid: "le ri" 1fr
+          / 1.6fr 1fr;
+}
+
+/*left side*/
+
+.le {
+    grid-area: le;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-description {
+    width: 90%;
+    flex-grow: 1;
+}
+
+.video-description h3 {
+    margin: 1rem 0 0.5rem 0;
+}
+
+/*right side*/
+
+.ri {
+    grid-area: ri;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid rgb(201, 195, 195);
+}
+
+.ri img {
+    width: 150px;
+    height: 150px;
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.small-wrap {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel section {
+    margin-left: 0.5rem;
+}
