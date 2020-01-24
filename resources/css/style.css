@@ -49,6 +49,10 @@ body {
 
 header {
     grid-area: header;
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    background-color: white;
     display: flex;
     justify-content: space-between;
 }
@@ -65,6 +69,9 @@ main {
 
 footer {
     grid-area: footer;
+    font-size: 0.75rem;
+    border-top: 2px solid rgb(201, 195, 195);
+    background-color: rgb(238, 234, 234);
 }
 
 /*main-grid*/
@@ -362,6 +369,10 @@ section.course-content {
     margin: 0.5rem 0 1rem;
 }
 
+#thesis-exhibit video {
+    max-width: 550px;
+}
+
 .wrap-it {
     display: grid;
     height: 100%;
@@ -417,4 +428,20 @@ section.course-content {
 
 .panel section {
     margin-left: 0.5rem;
+}
+
+/*footer layout*/
+
+.copyright {
+    float: left;
+    margin: 0.8rem 0 0 1.1rem;
+}
+
+.terms-privacy {
+    float: right;
+    margin: 0.8rem 0.9rem 0 0;
+}
+
+#terms {
+    margin-right: 0.8rem;
 }
